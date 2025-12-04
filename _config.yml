@@ -4,7 +4,7 @@ description: A complete data science journey from raw data to production-ready f
 author: Data V Labs
 
 # Jekyll Slate Theme (OFFICIAL METHOD)
-theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docscs
 
 # Plugins (REQUIRED for remote_theme)
 plugins:
