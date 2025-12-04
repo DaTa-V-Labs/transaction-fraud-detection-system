@@ -1,0 +1,71 @@
+---
+---
+
+/* 1. Import the original theme styles first */
+@import "{{ site.theme }}";
+
+/* =========================================
+   CUSTOM OVERRIDES
+   ========================================= */
+
+/* 2. Fix the Layout Width & Central Whitespace */
+.wrapper {
+    max-width: 1400px !important; /* Makes the page much wider (was ~800px) */
+    width: 95% !important;        /* Uses almost full width of the screen */
+    margin: 0 auto;
+}
+
+/* 3. Adjust the Content Area (Right Side) */
+section {
+    width: 75% !important;        /* Text takes up 75% of the page width */
+    float: right !important;      /* Forces it to the right */
+    padding-left: 20px;           /* Small gap between menu and text */
+    max-width: none !important;   /* Removes any internal limits on text width */
+}
+
+/* 4. Adjust the Sidebar (Left Side) */
+header {
+    width: 20% !important;        /* Sidebar takes up 20% */
+    float: left !important;
+}
+
+/* 5. Fix the Table Scrolling */
+table {
+    display: block;               /* Required to make scroll work */
+    width: 100%;                  /* Table takes full width of the section */
+    overflow-x: auto;             /* Adds horizontal scrollbar if table is too big */
+    white-space: nowrap;          /* Optional: Keeps rows on one line */
+    border-collapse: collapse;
+}
+
+/* Optional: Make the scrollbar look nicer */
+table::-webkit-scrollbar {
+    height: 8px;
+}
+table::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* 6. Mobile Responsiveness 
+   (Reset everything to a single column on phones) */
+@media print, screen and (max-width: 900px) {
+    .wrapper {
+        width: auto !important;
+        margin: 0;
+    }
+    header, section {
+        float: none !important;
+        position: static !important;
+        width: auto !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+    section {
+        padding: 20px;
+    }
+}
