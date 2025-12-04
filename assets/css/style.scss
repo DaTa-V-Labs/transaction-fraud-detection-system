@@ -1,65 +1,68 @@
 ---
 ---
 
-/* 1. Import the original Slate theme */
+/* 1. Import the Slate theme */
 @import "{{ site.theme }}";
 
 /* =========================================
-   SLATE THEME OVERRIDES
+   LAYOUT & WIDE MODE
    ========================================= */
-
-/* 2. LAYOUT WIDTH
-   - width: 80% adds the white space you asked for on the sides.
-   - max-width: 1200px stops it from getting too wide on huge screens. 
-*/
 .inner {
-    max-width: 1200px !important; 
-    width: 70% !important;        
+    max-width: 1100px !important; 
+    width: 75% !important;        
     margin: 0 auto;
 }
 
-/* Ensure the Header matches the Content width */
 #header_wrap .inner, 
 #main_content_wrap .inner {
     max-width: 1200px !important;
-    width: 80% !important;
+    width: 90% !important;
 }
 
-/* 3. TABLE FIXES (Crucial for Data Science) */
+/* =========================================
+   TABLE FIXES (The "Bulletproof" Solution)
+   ========================================= */
 
-/* Option A: For tables wrapped in <div class="table-wrapper"> (Best Practice) */
-.table-wrapper {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
+/* 1. Reset the Colab Container 
+   This overrides the 'display: flex' that was breaking your scroll */
+.colab-df-container {
+    display: block !important;    
+    width: 100% !important;
+    overflow-x: auto !important;  /* Forces the scrollbar */
     -webkit-overflow-scrolling: touch;
-    margin-bottom: 20px;
-    border: 1px solid #ddd; 
+    margin-bottom: 1.5em;
+    border: 1px solid #444;       /* Matches Slate theme */
+    background: #fff;             /* White background for data readability */
 }
 
-/* Option B: Fallback for raw tables without the wrapper */
-table {
-    display: block;
+/* 2. Target the Wrapper (if you added it manually) */
+.table-wrapper {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    border: 1px solid #444;
+    background: #fff; 
+}
+
+/* 3. Style the Table itself */
+table, .dataframe {
     width: 100%;
     max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
     border-collapse: collapse;
-    background: #fff;  /* White background helps read data on Slate's grey theme */
-    color: #333;       /* Dark text for contrast */
-    margin-bottom: 20px;
+    white-space: nowrap;          /* Keeps rows on one line */
+    color: #333;                  /* Black text on white background */
+    margin: 0;
 }
 
-/* Make table cells look clean */
-table th, table td {
-    border: 1px solid #ddd;
+/* 4. Table Cells */
+table th, table td, .dataframe th, .dataframe td {
     padding: 8px 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    text-align: left;
 }
 
-/* 4. MOBILE RESPONSIVENESS */
-@media screen and (max-width: 768px) {
-    .inner {
-        width: 90% !important; /* On phones, we use more space so text is readable */
-        margin: 0 auto;
-    }
+/* 5. Hide the 'Interactive' Button junk if any remains */
+.colab-df-buttons, .colab-df-convert {
+    display: none !important;
 }
