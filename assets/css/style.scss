@@ -25,9 +25,11 @@
 
 /* Body Text - Clean Sans-Serif */
 body {
+    /* Font family removed to revert to original theme font */
     font-size: 14px !important;
     line-height: 1.6 !important;
     color: #333 !important;
+    background-color: #fff !important; 
 }
 
 /* --- THE FIX FOR INVISIBLE HEADINGS --- */
@@ -39,7 +41,7 @@ body {
 #main_content_wrap h4, 
 #main_content_wrap h5, 
 #main_content_wrap h6 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /* Font family removed to revert to original theme font */
     font-weight: 600 !important;
     color: #333 !important;       /* Dark text for white background */
     margin-top: 1.5em !important;
@@ -48,14 +50,14 @@ body {
 /* B. Headings inside the Top Banner (Header) -> WHITE */
 #header_wrap h1, 
 #header_wrap h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /* Font family removed to revert to original theme font */
     color: #fff !important;       /* FORCE WHITE text so it shows on black background */
     margin-top: 0 !important;
 }
 
 /* Code Blocks */
 pre, code, .highlight {
-    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
+    /* Font family removed to revert to original theme font */
     font-size: 13px !important;
 }
 
@@ -87,7 +89,7 @@ table, .dataframe {
     border-collapse: collapse;
     white-space: nowrap; 
     color: #333;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /* Font family removed to revert to original theme font */
     font-size: 13px !important;
 }
 
@@ -100,8 +102,18 @@ table th, table td, .dataframe th, .dataframe td {
 table th {
     font-weight: bold;
     background-color: #f9f9f9;
+    color: #333 !important; /* <--- FIXED: Forces text to be dark grey */
 }
 
 .colab-df-buttons, .colab-df-convert {
+    display: none !important;
+}
+
+/* =========================================
+   4. UI ELEMENT HIDING
+   ========================================= */
+
+/* Hide the 'View on GitHub' ribbon/button */
+#forkme_banner {
     display: none !important;
 }
