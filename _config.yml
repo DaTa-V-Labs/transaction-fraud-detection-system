@@ -1,0 +1,5 @@
+# _config.yml
+theme: jekyll-theme-minimal
+markdown: kramdown
+plugins:
+  - jekyll-feed
