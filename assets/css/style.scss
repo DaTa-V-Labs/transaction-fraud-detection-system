@@ -193,7 +193,7 @@ table th {
 */
 img[alt="png"] {
     width: 100% !important;      /* Makes the image take up the full column width */
-    max-width: 850px !important; /* Cap it so it doesn't get distorted on huge screens */
+    max-width: 950px !important; /* Cap it so it doesn't get distorted on huge screens */
     height: auto !important;     /* Keeps the aspect ratio correct */
     display: block;
     margin: 20px auto;           /* Centers the image */
