@@ -1,6 +1,6 @@
 # 🎬 **OPENING SCENE**
 
-![png](Gemini_Generated_Image_p9mmwxp9mmwxp9mm.png)
+![png](index_files/Gemini_Generated_Image_p9mmwxp9mmwxp9mm.png)
 
 ### **The Challenge: Security vs. Sanity**
 
@@ -7398,6 +7398,7 @@ to keep real people like Sarah safe — one transaction at a time. 💳✨
 **📚 Further Reading**
 * *[Fraud Detection using Machine Learning (IEEE Xplore)](https://ieeexplore.ieee.org/document/10895130)*
 * *Handling Imbalanced Datasets in Computer Vision and Fraud Detection*
+
 
 
 
