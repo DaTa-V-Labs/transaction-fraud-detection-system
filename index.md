@@ -5,7 +5,7 @@
 ### **The Challenge: Security vs. Sanity**
 
 The Numbers Don't Lie (But Fraudsters Do)
-- $165 BILLION in projected fraud losses between 2023-2027 globally
+- 60% of financial organizations reported an increase in fraud.
 - 1 in 4 people have experienced payment fraud
 - 24/7 - Fraudsters are always online (they don't have a 9-5 job)
 - FALSE POSITIVES - Legit customers getting blocked feels WORSE than getting hacked.
